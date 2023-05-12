@@ -1,0 +1,273 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --another: #589167;
+  --black: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align items in the center */
+  margin: 0;
+  background: var(--another);
+  width: 100%;
+  height: 60px; /* Increase the height for better visibility */
+  padding: 0 20px; /* Add some padding on the left and right */
+}
+
+.info {
+  display: flex; /* Make the info section a flex container */
+  align-items: center; /* Vertically align items in the center */
+  margin-right: 40px;
+}
+
+.info i {
+  margin-right: 5px;
+}
+
+.info i.fa {
+  margin-right: 5px;
+  margin-top: 8px;
+  color: var(--light);
+  font-size: smaller;
+}
+.info a {
+  text-decoration: none;
+  color: var(--light);
+  font-size: 13px;
+  margin-right: 10px;
+}
+
+.socials {
+  display: flex; /* Make the socials section a flex container */
+  align-items: center; /* Vertically align items in the center */
+}
+
+.socials .fa {
+  color: var(--light);
+  margin-right: 20px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.socials .fa:hover {
+  color: var(--blue);
+}
+
+/* Additional styles for better readability */
+.info span,
+.socials span {
+  color: var(--light);
+  font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+  }
+  .socials,
+  .info {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.header {
+  background: var(--light);
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.header ul {
+  list-style: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--black);
+  margin-right: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.counsel {
+  margin: 20px;
+}
+
+.counsel a {
+  text-decoration: none;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.header .active a {
+  color: var(--another);
+}
+
+.header li a:hover {
+  color: var(--another);
+}
+
+@media screen and (max-width: 768px) {
+  .counsel a {
+    color: var(--light);
+    font-size: 14px;
+  }
+}
+
+section.home {
+  background-image: url(images/bg.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.content,
+.btn {
+  text-align: center;
+  top: 50%;
+  left: 10%;
+  position: absolute;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: justify;
+  line-height: 1.2;
+}
+.content p {
+  font-size: 16pxpx;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.2;
+}
+
+.btn {
+  top: 72%;
+  left: 10%;
+  text-align: center;
+}
+
+.btn button {
+  color: var(--light);
+  background: var(--another);
+  border: transparent;
+  margin: 5px 0px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+
+.btn button:last-child {
+  background-color: var(--light);
+  color: var(--black);
+  outline: none;
+}
+
+.btn button:hover {
+  color: var(--light);
+  background: var(--black);
+}
+
+.team {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  max-width: 70%;
+  flex-basis: 25%;
+  background: var(--another);
+  z-index: 999;
+  position: relative;
+  margin-top: -100px;
+  text-align: center;
+  justify-content: space-evenly;
+  text-align: justify;
+}
+
+.team1,
+.team2,
+.team3 {
+  background: linear-gradient(to right, var(--green), var(--another));
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.team i {
+  font-size: 36px;
+  color: white;
+  float: left;
+  padding: 10px;
+}
+
+.team h2 {
+  font-size: 18px;
+  color: var(--light);
+  margin-top: 10px;
+}
+
+.team p {
+  font-size: 12px;
+  color: var(--light);
+  margin-top: 20px;
+  word-spacing: normal;
+}
+
+.how-it-work {
+  background: var(--light);
+  text-align: center;
+  align-items: center;
+  position: relative;
+}
+
+section h4 {
+  color: var(--another);
+  text-transform: uppercase;
+  font-size: 12px;
+}
